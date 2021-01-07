@@ -1,0 +1,599 @@
+{
+	"info": {
+		"_postman_id": "b93142f6-88d4-4556-b403-4a7c2befbcba",
+		"name": "talentQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a Task",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"task\":\"Go to the Market\",\n    \"description\": \"Go to Market Fast Fast\",\n    \"start_time\": \"2021-01-07 02:30:43\",\n    \"end_time\": \"2021-01-07 02:30:43\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/task/create_task",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"task",
+						"create_task"
+					]
+				},
+				"description": "Create a Todo Task Endpoint"
+			},
+			"response": [
+				{
+					"name": "Create a task what will span through the day",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"task\":\"Go to the Market\",\n    \"description\": \"Go to Market Fast Fast\",\n    \"start_time\": \"2021-01-07 02:30:43\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/task/create_task",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"task",
+								"create_task"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 02:57:32 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 02:57:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Task Successfully Created!\",\n    \"data\": {\n        \"task\": \"Go to the Market\",\n        \"description\": \"Go to Market Fast Fast\",\n        \"start_time\": \"2021-01-07 02:30:43\",\n        \"is_task_all_day\": true,\n        \"updated_at\": \"2021-01-07T02:57:32.000000Z\",\n        \"created_at\": \"2021-01-07T02:57:32.000000Z\",\n        \"id\": 1\n    },\n    \"code\": \"00\"\n}"
+				},
+				{
+					"name": "Create a task with time frame",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"task\":\"Go to the Market\",\n    \"description\": \"Go to Market Fast Fast\",\n    \"start_time\": \"2021-01-07 02:30:43\",\n    \"end_time\": \"2021-01-07 02:30:43\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/task/create_task",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"task",
+								"create_task"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 02:59:29 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 02:59:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Task Successfully Created!\",\n    \"data\": {\n        \"task\": \"Go to the Market\",\n        \"description\": \"Go to Market Fast Fast\",\n        \"start_time\": \"2021-01-07 02:30:43\",\n        \"end_time\": \"2021-01-07 02:30:43\",\n        \"updated_at\": \"2021-01-07T02:59:29.000000Z\",\n        \"created_at\": \"2021-01-07T02:59:29.000000Z\",\n        \"id\": 2\n    },\n    \"code\": \"00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Task",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pending\":false,\n    \"done\":true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/task/update_task/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"task",
+						"update_task",
+						"4"
+					]
+				},
+				"description": "Create a Todo Task Endpoint"
+			},
+			"response": [
+				{
+					"name": "Update A choice filed in a task",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"comments\":\"Go to the University1\",\n    \"task\":\"Go to the University 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/task/update_task/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"task",
+								"update_task",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 04:23:31 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 04:23:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "55"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Account Updated!\",\n    \"data\": {\n        \"id\": 4,\n        \"task\": \"Go to the University 2\",\n        \"description\": \"Go to Market Fast Fast\",\n        \"comments\": \"Go to the University1\",\n        \"start_time\": \"2021-01-07 02:30:43\",\n        \"end_time\": \"2021-01-07 02:30:43\",\n        \"is_task_all_day\": 0,\n        \"pending\": 1,\n        \"ongoing\": 0,\n        \"done\": 0,\n        \"created_at\": \"2021-01-07T04:14:33.000000Z\",\n        \"updated_at\": \"2021-01-07T04:22:41.000000Z\"\n    },\n    \"code\": \"00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/task/get_all_tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"task",
+						"get_all_tasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Tasks",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/task/get_all_tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"task",
+								"get_all_tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 03:13:58 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 03:13:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Fetched all Tasks\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"task\": \"Go to the Market\",\n            \"description\": \"Go to Market Fast Fast\",\n            \"comments\": null,\n            \"start_time\": \"2021-01-07 02:30:43\",\n            \"end_time\": null,\n            \"is_task_all_day\": 1,\n            \"pending\": 1,\n            \"ongoing\": 0,\n            \"done\": 0,\n            \"created_at\": \"2021-01-07T02:57:32.000000Z\",\n            \"updated_at\": \"2021-01-07T02:57:32.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"task\": \"Go to the Market\",\n            \"description\": \"Go to Market Fast Fast\",\n            \"comments\": null,\n            \"start_time\": \"2021-01-07 02:30:43\",\n            \"end_time\": \"2021-01-07 02:30:43\",\n            \"is_task_all_day\": 0,\n            \"pending\": 1,\n            \"ongoing\": 0,\n            \"done\": 0,\n            \"created_at\": \"2021-01-07T02:59:29.000000Z\",\n            \"updated_at\": \"2021-01-07T02:59:29.000000Z\"\n        }\n    ],\n    \"code\": \"00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get A Task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/task/get_a_task/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"task",
+						"get_a_task",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get A Task",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/task/get_a_task/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"task",
+								"get_a_task",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 03:13:41 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 03:13:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Fetched Task!\",\n    \"data\": {\n        \"id\": 2,\n        \"task\": \"Go to the Market\",\n        \"description\": \"Go to Market Fast Fast\",\n        \"comments\": null,\n        \"start_time\": \"2021-01-07 02:30:43\",\n        \"end_time\": \"2021-01-07 02:30:43\",\n        \"is_task_all_day\": 0,\n        \"pending\": 1,\n        \"ongoing\": 0,\n        \"done\": 0,\n        \"created_at\": \"2021-01-07T02:59:29.000000Z\",\n        \"updated_at\": \"2021-01-07T02:59:29.000000Z\"\n    },\n    \"code\": \"00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete A Task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/task/delete_a_task/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"task",
+						"delete_a_task",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get A Task",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/task/get_a_task/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"task",
+								"get_a_task",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 03:13:41 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 03:13:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Fetched Task!\",\n    \"data\": {\n        \"id\": 2,\n        \"task\": \"Go to the Market\",\n        \"description\": \"Go to Market Fast Fast\",\n        \"comments\": null,\n        \"start_time\": \"2021-01-07 02:30:43\",\n        \"end_time\": \"2021-01-07 02:30:43\",\n        \"is_task_all_day\": 0,\n        \"pending\": 1,\n        \"ongoing\": 0,\n        \"done\": 0,\n        \"created_at\": \"2021-01-07T02:59:29.000000Z\",\n        \"updated_at\": \"2021-01-07T02:59:29.000000Z\"\n    },\n    \"code\": \"00\"\n}"
+				}
+			]
+		}
+	]
+}
