@@ -24,8 +24,8 @@ To run the application unit and feature tests, from the application root directo
 
 The application documentation, which contains the endpoints can either be accessed locally or online as described in the steps below:
 
-1. Import the `documentation.json` file at the root directory of this project to your postman collections to access the application documentations
-2. You can also access the documentation online using this [link](https://documenter.getpostman.com/view/2979665/TVzNJKzo)
+1.  Import the `documentation.json` file at the root directory of this project to your postman collections to access the application documentations
+2.  You can also access the documentation online using this [link](https://documenter.getpostman.com/view/2979665/TVzNJKzo)
 
 ## Author
 Ogbonna Vitalis
