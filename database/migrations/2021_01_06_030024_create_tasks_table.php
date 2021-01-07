@@ -24,6 +24,7 @@ class CreateTasksTable extends Migration
             $table->boolean("pending")->default(true);
             $table->boolean("ongoing")->default(false);
             $table->boolean("done")->default(false);
+            $table->boolean("completed")->default(false);
             $table->timestamps();
         });
     }

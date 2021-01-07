@@ -16,6 +16,11 @@ class TaskController extends Controller
         $this->taskService = $taskService;
     }
 
+    /**
+     * Create a task
+     *
+     * @return Task
+     */
     public function crateATask(TaskRequest $task)
     {
 
@@ -39,12 +44,17 @@ class TaskController extends Controller
         ], $status);
     }
 
+    /**
+     * Get List of tasks
+     *
+     * @return Array Tasks
+     */
     public function getAllTasks()
     {
         try {
             $tasks = $this->taskService->getAllTasks();
             $code = "00";
-            $message = "Fetched all Tasks";
+            $message = "Fetched all Tasks!";
         } catch (\Exception $e) {
             $code = "99";
             $tasks = [];
@@ -54,26 +64,37 @@ class TaskController extends Controller
         return response()->json([
             "message"   => $message,
             "data"      => $tasks,
-            "code"      => $code
+            "code"      => $code,
+            "status" => 200
         ]);
     }
 
+    /**
+     * Get a task
+     *
+     * @return Task
+     */
     public function getATask(Task $task)
     {
-
         return response()->json([
             "message"   => "Fetched Task!",
             'data'      => $task,
-            "code"      => "00"
+            "code"      => "00",
+            "status" => 200
         ]);
     }
 
+    /**
+     * Update a task
+     *
+     * @return Task
+     */
     public function updateTask(Task $task, Request $request)
     {
         $input = array_keys($request->all());
         foreach ($input as $input) {
             if (!array_key_exists($input, $task->getAttributes())) {
-                throw new \Exception('Filed '.$input.' does not exist');
+                throw new \Exception('Filed ' . $input . ' does not exist');
             }
         }
         $task->update($request->all());
@@ -82,18 +103,22 @@ class TaskController extends Controller
         return response()->json([
             "message"   => "Task Updated!",
             'data'      => $updatedTask,
-            "code"      => "00"
+            "code"      => "00",
+            "status" => 200
         ]);
-
     }
 
+    /**
+     * Delete a task
+     *
+     */
     public function deleteATask(Task $task)
     {
-
         $task->delete();
         return response()->json([
-            "message" => "Task Deleted",
-            "code"      => "00"
+            "message" => "Task Deleted!",
+            "code"      => "00",
+            "status" => 200
         ]);
     }
 }
